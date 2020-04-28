@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;900&display=swap');
+@import "./sass/_variables";
+
+html, body {
+  display: flex;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  min-width: 1000px;
+  font-family: 'Raleway', sans-serif;
+}
+
+app-root {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1090px;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+.element-shadow {
+  -webkit-box-shadow: 0 4px 9px -1px rgba(5,16,71,0.44);
+  -moz-box-shadow: 0 4px 9px -1px rgba(5,16,71,0.44);
+  box-shadow: 0 4px 9px -1px rgba(5,16,71,0.44);
+}
+
+.scroll-style::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Chrome/Safari/Webkit */
+}
+
+.disable-scrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+

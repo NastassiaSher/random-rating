@@ -1,0 +1,21 @@
+<div class="btn-line align-items-center element-shadow">
+  <div class="container btn-container">
+    <mat-progress-bar mode="indeterminate" *ngIf="rateInProgress" class="progress-bar"></mat-progress-bar>
+    <button class="rating-btn" (click)="toggleRandomRating()">
+      <i class='material-icons btn-icon'>extension</i>
+      {{btnText}}
+    </button>
+  </div>
+</div>
+<div class="wrapper scroll-style">
+  <div class="container list-items" [@listAnimation]="animationTrigger">
+    <ng-container *ngFor="let item of (artistsList | async); let i = index">
+      <app-list-item class="element-shadow"
+                     [listItem]="item"
+                     [itemIndex]="i"
+                     (mouseover)='applyBackgroundColor(i)'
+                     (rateToEmit)="getRating($event)">
+      </app-list-item>
+    </ng-container>
+  </div>
+</div>

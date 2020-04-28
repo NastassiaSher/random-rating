@@ -1,0 +1,95 @@
+@import "../../sass/_variables";
+
+:host {
+  width: 100%;
+  height: calc(100% - 140px);
+  display: flex;
+  flex-direction: column;
+  transition: 1s ease;
+
+  .btn-line {
+    width: 100%;
+    height: 50px;
+    background-color: $orange;
+  }
+
+  .btn-container {
+    justify-content: flex-end;
+  }
+
+  .rating-btn {
+    width: 200px;
+    height: 33px;
+    background-color: $orange_button;
+    border: 1px solid $white;
+    color: $white;
+    font-size: 18px;
+    outline:none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rating-btn:hover {
+    background-color: $orange;
+    cursor: pointer;
+  }
+
+  .rating-btn:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  .rating-btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+  }
+
+  .btn-icon {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .wrapper {
+    width: 100%;
+    height: calc(100% - 50px);
+    overflow-y: auto;
+  }
+  .list-items {
+    height: 100%;
+    display:block;
+    margin-top: 20px;
+  }
+
+  .list-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .list-items {
+    -ms-overflow-style: none;
+  }
+
+  .progress-bar {
+    width: calc(100% - 250px);
+    margin-right: 30px;
+    height: 33px;
+  }
+
+  ::ng-deep .mat-progress-bar-buffer {
+    background-color: $orange;
+  }
+
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: $orange_button;
+  }
+
+}

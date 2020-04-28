@@ -1,0 +1,18 @@
+<div class="photo-container">
+  <img [src]="listItem.coverUrl" alt="photo">
+</div>
+<div id="{{'itemInfo'+itemIndex}}" class="info">
+  <div id="{{'itemName'+itemIndex}}" class="item-name">{{listItem.name}}</div>
+  <div class="item-single">{{listItem.single}}</div>
+  <div class="item-rating">
+    Rate me:
+    <div id="{{'itemStars'+itemIndex}}" class="stars">
+      <i *ngFor="let star of starsArr; let i = index"
+         class='material-icons star-icon'
+         (click)="rateAnArtist(i)">
+        {{star}}
+      </i>
+    </div>
+  </div>
+</div>
+
